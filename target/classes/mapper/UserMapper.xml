@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thd.dao.UserMapper">
+    <select id="selectTest" resultType="com.thd.entity.User" parameterType="string">
+        select id, name from user
+        where name like CONCAT('%',#{name},'%')
+        and age &lt; 40
+    </select>
+</mapper>

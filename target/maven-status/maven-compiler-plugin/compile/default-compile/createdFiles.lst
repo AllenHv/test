@@ -1,0 +1,4 @@
+com\thd\dao\UserMapper.class
+com\thd\FirstMybatisPlusApplication.class
+com\thd\entity\User$UserBuilder.class
+com\thd\entity\User.class

@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: com.thd.SelectTest
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.178 s <<< FAILURE! - in com.thd.SelectTest
+select(com.thd.SelectTest)  Time elapsed: 0.012 s  <<< FAILURE!
+java.lang.AssertionError: expected:<8> but was:<10>
+	at com.thd.SelectTest.select(SelectTest.java:32)
+
+test(com.thd.SelectTest)  Time elapsed: 0.003 s  <<< ERROR!
+org.mybatis.spring.MyBatisSystemException: 
+nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+### The error may exist in file [E:\gitWebWay\first-mybatis-plus\target\classes\mapper\UserMapper.xml]
+### The error may involve com.thd.dao.UserMapper.selectTest
+### The error occurred while handling results
+### SQL: select id, name from user         where name like CONCAT('%',?,'%')         and age < 40
+### Cause: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+	at com.thd.SelectTest.test(SelectTest.java:187)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error querying database.  Cause: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+### The error may exist in file [E:\gitWebWay\first-mybatis-plus\target\classes\mapper\UserMapper.xml]
+### The error may involve com.thd.dao.UserMapper.selectTest
+### The error occurred while handling results
+### SQL: select id, name from user         where name like CONCAT('%',?,'%')         and age < 40
+### Cause: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+	at com.thd.SelectTest.test(SelectTest.java:187)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+	at com.thd.SelectTest.test(SelectTest.java:187)
+
+selectByWrapperSuper1(com.thd.SelectTest)  Time elapsed: 0.005 s  <<< ERROR!
+org.mybatis.spring.MyBatisSystemException: 
+nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+### The error may exist in com/thd/dao/UserMapper.java (best guess)
+### The error may involve com.thd.dao.UserMapper.selectList
+### The error occurred while handling results
+### SQL: SELECT   id,name   FROM user     WHERE name LIKE ? AND age < ?
+### Cause: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+	at com.thd.SelectTest.selectByWrapperSuper1(SelectTest.java:179)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+
+### Error querying database.  Cause: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+### The error may exist in com/thd/dao/UserMapper.java (best guess)
+### The error may involve com.thd.dao.UserMapper.selectList
+### The error occurred while handling results
+### SQL: SELECT   id,name   FROM user     WHERE name LIKE ? AND age < ?
+### Cause: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+	at com.thd.SelectTest.selectByWrapperSuper1(SelectTest.java:179)
+Caused by: java.lang.IndexOutOfBoundsException: Index: 2, Size: 2
+	at com.thd.SelectTest.selectByWrapperSuper1(SelectTest.java:179)
+
